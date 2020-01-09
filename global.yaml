@@ -1,0 +1,55 @@
+---
+# --------------------------------------------
+# Description: Hiera YAML with global values
+#
+# Customer: AIV
+#
+# Reviewer: fernando.alvareznoya@bryxx.eu
+#
+# Date: 12/2019
+# 
+# Devops <Devops@bryxx.eu>
+# Copyright 2019 Bryxx nv
+# --------------------------------------------
+
+# Name of the customer
+company_customer: 'AIV'
+
+# Name of the domain
+domain_name: 'aiv.local'
+
+# Ntp servers
+ntp_server_1: '10.3.225.51'
+ntp_server_2: '10.3.225.52'
+
+
+# Users and groups for administrative tasks
+oracle_user: 'oracle'
+oracle_pass: '12345' # Create a special yaml for keys!
+oracle_group: 'oinstall'
+oracle_ssh_type: 'ssh-rsa'
+oracle_ssh_key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCxD+ZRh450PSS99bxwC0gs9cR9XYyfTu2efRfKu777qhVBxSehS+RRQ8PcgDlfg6Z+XzB6GNyr2cm2WK48bUPfVAZWe8A4PqUF08KxXcP/SDsTk7cwnaqYmKVuQjbxoE5dd9B96XYQjxFa6GKuLuxxR15QulNhyKjWgN8eX4Iqk51mEOHWN0mjSEGMxGRtSWTYs/yNsqI+gaFpTfkT/KU6gMzG/lpBoAhFmQyl330GRntbffEU22VmoR8C3hNtSzTsKn9Pyg2YnSGOW4HmhcKlDnslD4gXHl+Mrj1p6TpUc/9JTJ6Tmg5jOYKeFcti5ehBwKV/2Jrkw1/2OZ666Bp1'
+
+# For Bryxx
+bryxx_user: 'sdbryxx'
+bryxx_uid: 2000
+bryxx_pass: '12345' # Create a special yaml for keys!
+bryxx_group: 'sdbryxx'
+bryxx_gid: 2000
+bryxx_ssh_type: 'ssh-rsa'
+bryxx_ssh_key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCo6ZePLNgTAEccAPIfmOBIgrGLTGGLgCFxVyW01qUpvuTH/JgD0jrArg9Sd+YVYUVpGZmuGw/fK305jgVB3Qm5oB98irqvoaiL6rX6908Gou60OKW8GNtPInnAU20g/a/nYkBbLnbLctLSJ1Sw2DQU4XHTtGDjxoGl8a2CAP/V6STXXSsfXio/Nifbu/5KtISpArtk+gUcQEe5WFi9qWERvaY5gSD7Uq3hscf9hNnO5bbneu8/kaOuT1lVWefsAjC6rcRi4IttMXUCEwXFmVxhx+tHWE8C2mm7hBMiJe6zQXkRpKULu2gKCF1B2uXh8oBECIwwxtW7FmfVgyg1UJr3'
+
+# For Monin
+monin_user: 'sdmonin'
+monin_uid: 2100
+monin_pass: '12345' # Create a special yaml for keys!
+monin_group: 'sdmonin'
+monin_gid: 2100
+monin_ssh_type: 'ssh-rsa'
+monin_ssh_key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDiq2v906gWW0EkEQy41cvFg9OoNusg1fOSa4/PHmxEF6cX2FnONyWKv02kLezxvWOHoJ5nNR9hwiWNamZvMMqtObDeWGuZPPbZnNcV1ecCo2yBbcoBl6JeIqjzpxD9PMSWETP+Iklv0BHf+zACPwLe+jI09sovuANIJtWIYbBKqVAqNftUUR4iEWSmbptgNy/Ub71BYmRwBaYOuA0PD2SVf7Hx50oj+w7jt2wOJyYFdZG9vLOlilSIutJYIZF6qMt/y/B2UP46I4QlxvYAMs7lTD7q3mC6pMtKDtpz9lIgECwjXFL8dNNUiwbFFc7i0LC4/zQpLwWA+60cfYBA+yrv'
+
+# User for Oracle Cloud Control
+oracc_user: 'oracc'
+oracc_pass: '12345' # Create a special yaml for keys!
+oracc_ssh_type: 'ssh-rsa'
+oracc_ssh_key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDJFoWJ6HOk3P6pL59vhfrIKFbor4vMeXAYBoA2DlS8NkEc8cW/MHe6FFk4VfS0lLl5mzlGcThanQYx14TKWjrB7fGAMSNHl3BYHFdgzNed3V8Da5661pC8rHw7JspFemPeLB1PgLVXH0R4Wrf3Lk1TC27s/GlrWyepb2XeBV0zdxZr1BtL/szwugrNxd/QNRy+es8bYqO5jGGnPQaVLMLdWxGO5eXKAtpT+ilvhYiH/1MlcY1eGqIzrL63NyEZxAAwIyv1K5Qx2Qx/oAdOlErtd7zU5RcNLuT9dxoTg32C4z8B8hjYDBNKoLGca8l6UhHhHb7uA6mkO/CbttUkwFiP'

@@ -1,0 +1,15 @@
+---
+# --------------------------------------------
+# Description: Hiera file for the environment tst
+#
+# Customer: AIV
+#
+# Reviewer: fernando.alvareznoya@bryxx.eu
+#
+# Date: 12/2019
+# 
+# Devops <Devops@bryxx.eu>
+# Copyright 2019 Bryxx nv
+# --------------------------------------------
+
+customer_branch: "Test environment"

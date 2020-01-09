@@ -1,0 +1,180 @@
+---
+# --------------------------------------------
+# Description: Hiera file for the environment dev
+#
+# Customer: AIV
+#
+# Reviewer: fernando.alvareznoya@bryxx.eu
+#
+# Date: 12/2019
+# 
+# Devops <Devops@bryxx.eu>
+# Copyright 2019 Bryxx nv
+# --------------------------------------------
+
+customer_branch: "Development environment"
+
+# DB Oracle Installation
+aiv_db::version: '12.2.0.1'
+aiv_db::architecture: 'Linux-x86-64'
+aiv_db::version_name: "%{hiera('aiv_db::version')}_%{hiera('aiv_db::architecture')}"
+aiv_db::file: 'V839960-01'
+aiv_db::database_type: 'EE'
+aiv_db::oracle_base: '/oracle'
+aiv_db::oracle_home: '/oracle/product/12.1/db'
+aiv_db::bash_profile: true
+aiv_db::user: "%{hiera('oracle_user')}" # oracle
+aiv_db::group: 'dba'
+aiv_db::group_install: "%{hiera('oracle_group')}" # oinstall
+aiv_db::group_oper: 'oper'
+aiv_db::download_dir: '/data/install'
+aiv_db::zip_extract: true
+aiv_db::puppet_download_mnt_point: '/oradb'
+
+# DB Oracle Patch Upgrade
+aiv_db::patch_name: '112000_opatch_upgrade'
+aiv_db::patch_file: 'p6880880_112000_Linux-x86-64.zip'
+aiv_db::csi_number: 111111
+aiv_db::support_id: 'aiv@aiv.be'
+aiv_db::patch_opversion: '11.2.0.3.6'
+aiv_db::patch_download_dir: '/install'
+
+# DB magda
+aiv_db_magda::oracle_base: '/u01/app/oracle'
+aiv_db_magda::oracle_home: '/u01/app/oracle/product/db/1220/magda_d'
+aiv_db_magda::version: '12.2'
+aiv_db_magda::user: 'oracle'
+aiv_db_magda::group: 'dba'
+aiv_db_magda::download_dir: '/install'
+aiv_db_magda::action: 'create'
+aiv_db_magda::db_name: 'magda_d'
+aiv_db_magda::db_domain: 'magda_d.magda.cpc.vonet.be'
+aiv_db_magda::db_port: 1522
+aiv_db_magda::sys_password: 'Welcome01'
+aiv_db_magda::system_password: 'Welcome01'
+aiv_db_magda::data_file_destination: '/u02/oracle/data/magda_d'
+aiv_db_magda::recovery_area_destination: '/oracle/flash_recovery_area'
+aiv_db_magda::character_set: 'AL32UTF8'
+aiv_db_magda::nationalcharacter_set: 'UTF8'
+aiv_db_magda::init_params:
+                  open_cursors: 1000
+                  processes: 600
+                  job_queue_processes: 4
+aiv_db_magda::sample_schema: 'TRUE'
+aiv_db_magda::memory_percentage: 40
+aiv_db_magda::memory_total: 800
+aiv_db_magda::database_type: "MULTIPURPOSE"
+aiv_db_magda::em_configuration: "NONE"
+
+# DB magsoa
+aiv_db_magsoa::oracle_base: '/u01/app/oracle'
+aiv_db_magsoa::oracle_home: '/u01/app/oracle/product/db/1220/magsoa_d'
+aiv_db_magsoa::version: '12.2'
+aiv_db_magsoa::user: 'oracle'
+aiv_db_magsoa::group: 'dba'
+aiv_db_magsoa::download_dir: '/install'
+aiv_db_magsoa::action: 'create'
+aiv_db_magsoa::db_name: 'magsoa_d'
+aiv_db_magsoa::db_domain: 'magsoa_d.magsoa.cpc.vonet.be'
+aiv_db_magsoa::db_port: 1521
+aiv_db_magsoa::sys_password: 'Welcome01'
+aiv_db_magsoa::system_password: 'Welcome01'
+aiv_db_magsoa::data_file_destination: '/u02/oracle/data/magsoa_d'
+aiv_db_magsoa::recovery_area_destination: '/oracle/flash_recovery_area'
+aiv_db_magsoa::character_set: 'AL32UTF8'
+aiv_db_magsoa::nationalcharacter_set: 'UTF8'
+aiv_db_magsoa::init_params:
+                  open_cursors: 1000
+                  processes: 600
+                  job_queue_processes: 4
+aiv_db_magsoa::sample_schema: 'TRUE'
+aiv_db_magsoa::memory_percentage: 40
+aiv_db_magsoa::memory_total: 800
+aiv_db_magsoa::database_type: "MULTIPURPOSE"
+aiv_db_magsoa::em_configuration: "NONE"
+
+# DB viplog
+aiv_db_viplog::oracle_base: '/u01/app/oracle'
+aiv_db_viplog::oracle_home: '/u01/app/oracle/product/db/1220/viplogd'
+aiv_db_viplog::version: '12.2'
+aiv_db_viplog::user: 'oracle'
+aiv_db_viplog::group: 'dba'
+aiv_db_viplog::download_dir: '/install'
+aiv_db_viplog::action: 'create'
+aiv_db_viplog::db_name: 'viplogd'
+aiv_db_viplog::db_domain: 'viplogd.viplog.cpc.vonet.be'
+aiv_db_viplog::db_port: 1523
+aiv_db_viplog::sys_password: 'Welcome01'
+aiv_db_viplog::system_password: 'Welcome01'
+aiv_db_viplog::data_file_destination: '/u02/oracle/data/viplogd'
+aiv_db_viplog::recovery_area_destination: '/oracle/flash_recovery_area'
+aiv_db_viplog::character_set: 'AL32UTF8'
+aiv_db_viplog::nationalcharacter_set: 'UTF8'
+aiv_db_viplog::init_params:
+                  open_cursors: 1000
+                  processes: 600
+                  job_queue_processes: 4
+aiv_db_viplog::sample_schema: 'TRUE'
+aiv_db_viplog::memory_percentage: 40
+aiv_db_viplog::memory_total: 800
+aiv_db_viplog::database_type: "MULTIPURPOSE"
+aiv_db_viplog::em_configuration: "NONE"
+
+# DB vipadm
+aiv_db_vipadm::oracle_base: '/u01/app/oracle'
+aiv_db_vipadm::oracle_home: '/u01/app/oracle/product/db/1220/vipadmd'
+aiv_db_vipadm::version: '12.2'
+aiv_db_vipadm::user: 'oracle'
+aiv_db_vipadm::group: 'dba'
+aiv_db_vipadm::download_dir: '/install'
+aiv_db_vipadm::action: 'create'
+aiv_db_vipadm::db_name: 'vipadmd'
+aiv_db_vipadm::db_domain: 'vipadmd.vipadm.cpc.vonet.be'
+aiv_db_vipadm::db_port: 1524
+aiv_db_vipadm::sys_password: 'Welcome01'
+aiv_db_vipadm::system_password: 'Welcome01'
+aiv_db_vipadm::data_file_destination: '/u02/oracle/data/vipadmd'
+aiv_db_vipadm::recovery_area_destination: '/oracle/flash_recovery_area'
+aiv_db_vipadm::character_set: 'AL32UTF8'
+aiv_db_vipadm::nationalcharacter_set: 'UTF8'
+aiv_db_vipadm::init_params:
+                  open_cursors: 1000
+                  processes: 600
+                  job_queue_processes: 4
+aiv_db_vipadm::sample_schema: 'TRUE'
+aiv_db_vipadm::memory_percentage: 40
+aiv_db_vipadm::memory_total: 800
+aiv_db_vipadm::database_type: "MULTIPURPOSE"
+aiv_db_vipadm::em_configuration: "NONE"
+
+# Listener DB magda
+aiv_lst_magda::listener_name: 'magda_lst'
+aiv_lst_magda::action: 'start'
+aiv_lst_magda::oracle_base: "%{hiera('aiv_db_magda::oracle_base')}"
+aiv_lst_magda::oracle_home: "%{hiera('aiv_db_magda::oracle_home')}"
+aiv_lst_magda::user: "%{hiera('aiv_db_magda::user')}"
+aiv_lst_magda::group: "%{hiera('aiv_db_magda::group')}"
+
+# Listener DB magsoa
+aiv_lst_magsoa::listener_name: 'magsoa_lst'
+aiv_lst_magsoa::action: 'start'
+aiv_lst_magsoa::oracle_base: "%{hiera('aiv_db_magsoa::oracle_base')}"
+aiv_lst_magsoa::oracle_home: "%{hiera('aiv_db_magsoa::oracle_home')}"
+aiv_lst_magsoa::user: "%{hiera('aiv_db_magsoa::user')}"
+aiv_lst_magsoa::group: "%{hiera('aiv_db_magsoa::group')}"
+
+# Listener DB vipadm
+aiv_lst_vipadm::listener_name: 'vipadm_lst'
+aiv_lst_vipadm::action: 'start'
+aiv_lst_vipadm::oracle_base: "%{hiera('aiv_db_vipadm::oracle_base')}"
+aiv_lst_vipadm::oracle_home: "%{hiera('aiv_db_vipadm::oracle_home')}"
+aiv_lst_vipadm::user: "%{hiera('aiv_db_vipadm::user')}"
+aiv_lst_vipadm::group: "%{hiera('aiv_db_vipadm::group')}"
+
+# Listener DB viplog
+aiv_lst_viplog::listener_name: 'viplog_lst'
+aiv_lst_viplog::action: 'start'
+aiv_lst_viplog::oracle_base: "%{hiera('aiv_db_viplog::oracle_base')}"
+aiv_lst_viplog::oracle_home: "%{hiera('aiv_db_viplog::oracle_home')}"
+aiv_lst_viplog::user: "%{hiera('aiv_db_viplog::user')}"
+aiv_lst_viplog::group: "%{hiera('aiv_db_viplog::group')}"
