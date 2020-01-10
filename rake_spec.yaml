@@ -3,7 +3,7 @@
   - yaml
 :hierarchy:
   - 'rspec_tests'
-  - 'environments/%{::environment}'
+  - 'environments/dev'
   - 'global'
 :yaml:
   :datadir: 'spec/fixtures/modules/hiera_data'
