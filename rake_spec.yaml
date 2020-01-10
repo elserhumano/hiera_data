@@ -1,0 +1,8 @@
+---
+:backends:
+  - yaml
+:hierarchy:
+  - 'rspec_tests'
+  - 'global'
+:yaml:
+  :datadir: 'spec/fixtures/modules/hiera_data'
