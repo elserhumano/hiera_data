@@ -2,3 +2,19 @@
 
 company_customer: 'ACME'
 
+# DB Oracle Installation
+aiv_db::version: '12.2.0.1'
+aiv_db::architecture: 'Linux-x86-64'
+aiv_db::version_name: "%{hiera('aiv_db::version')}_%{hiera('aiv_db::architecture')}"
+aiv_db::file: 'V839960-01'
+aiv_db::database_type: 'EE'
+aiv_db::oracle_base: '/oracle'
+aiv_db::oracle_home: '/oracle/product/12.1/db'
+aiv_db::bash_profile: true
+aiv_db::user: "%{hiera('oracle_user')}" # oracle
+aiv_db::group: 'dba'
+aiv_db::group_install: "%{hiera('oracle_group')}" # oinstall
+aiv_db::group_oper: 'oper'
+aiv_db::download_dir: '/data/install'
+aiv_db::zip_extract: true
+aiv_db::puppet_download_mnt_point: '/oradb'
