@@ -2,3 +2,5 @@
 
 company_customer: 'ACME'
 
+aiv_db::file: 'archivo'
+aiv_db::download_dir: '/directorio/'
