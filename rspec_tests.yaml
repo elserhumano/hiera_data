@@ -2,5 +2,3 @@
 
 company_customer: 'ACME'
 
-is_pipeline_deployment: false
-python::version: '99.99.99'
