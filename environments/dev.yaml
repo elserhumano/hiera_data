@@ -19,6 +19,7 @@ aiv_db::version: '12.2.0.1'
 aiv_db::architecture: 'Linux-x86-64'
 aiv_db::version_name: "%{hiera('aiv_db::version')}_%{hiera('aiv_db::architecture')}"
 aiv_db::file: 'V839960-01'
+aiv_db::user_base_dir: '/home'
 aiv_db::database_type: 'EE'
 aiv_db::oracle_base: '/oracle'
 aiv_db::oracle_home: '/oracle/product/12.1/db'
