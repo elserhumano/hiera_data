@@ -15,4 +15,6 @@
 company_customer: 'ACME'
 
 #aiv_db::file: 'archivo'
-#aiv_db::download_dir: 'c:\directorio'
+
+aiv_db::download_dir: '/data/install3'
+aiv_db::puppet_download_mnt_point: '/data/install33'
