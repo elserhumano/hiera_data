@@ -1,6 +1,18 @@
 ---
+# --------------------------------------------
+# Description: Hiera file for the environment dev
+#
+# Customer: AIV
+#
+# Reviewer: fernando.alvareznoya@bryxx.eu
+#
+# Date: 12/2019
+# 
+# Devops <Devops@bryxx.eu>
+# Copyright 2019 Bryxx nv
+# --------------------------------------------
 
 company_customer: 'ACME'
 
-aiv_db::file: 'archivo'
-aiv_db::download_dir: 'c:\directorio'
+#aiv_db::file: 'archivo'
+#aiv_db::download_dir: 'c:\directorio'
