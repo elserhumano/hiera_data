@@ -3,4 +3,4 @@
 company_customer: 'ACME'
 
 aiv_db::file: 'archivo'
-aiv_db::download_dir: '/directorio/'
+aiv_db::download_dir: 'c:\directorio'
