@@ -28,7 +28,7 @@ aiv_db::user: "%{hiera('oracle_user')}" # oracle
 aiv_db::group: 'dba'
 aiv_db::group_install: "%{hiera('oracle_group')}" # oinstall
 aiv_db::group_oper: 'oper'
-aiv_db::download_dir: '//data/install'
+aiv_db::download_dir: '///data/install'
 aiv_db::zip_extract: true
 aiv_db::puppet_download_mnt_point: '/oradb'
 
