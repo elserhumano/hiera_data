@@ -14,7 +14,17 @@
 
 company_customer: 'ACME'
 
-#aiv_db::file: 'archivo'
-
 aiv_db::download_dir: '/data/install3'
 aiv_db::puppet_download_mnt_point: '/data/install33'
+
+oracle_pass: '12345'
+oracle_ssh_key: '12345'
+
+bryxx_pass: '12345'
+bryxx_ssh_key: '12345'
+
+monin_pass: '12345'
+monin_ssh_key: '12345'
+
+oracc_pass: '12345'
+oracc_ssh_key: '12345'
