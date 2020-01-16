@@ -30,7 +30,7 @@ aiv_db::group_install: "%{hiera('oracle_group')}" # oinstall
 aiv_db::group_oper: 'oper'
 aiv_db::download_dir: '/data/install'
 aiv_db::zip_extract: true
-aiv_db::puppet_download_mnt_point: 'oradb/'
+aiv_db::puppet_download_mnt_point: '/oradb'
 
 # DB Oracle Patch Upgrade
 aiv_db::patch_name: '112000_opatch_upgrade'
