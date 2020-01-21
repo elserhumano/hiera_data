@@ -179,3 +179,37 @@ aiv_lst_viplog::oracle_base: "%{hiera('aiv_db_viplog::oracle_base')}"
 aiv_lst_viplog::oracle_home: "%{hiera('aiv_db_viplog::oracle_home')}"
 aiv_lst_viplog::user: "%{hiera('aiv_db_viplog::user')}"
 aiv_lst_viplog::group: "%{hiera('aiv_db_viplog::group')}"
+
+# Web Logic Oracle
+aiv_wl::name: 'aiv_wl_magda'
+aiv_wl::version: '12213'
+aiv_wl::filename: 'fmw_12.2.1.3.0_wls.jar'
+aiv_wl::ora_inventory_dir: '/sysprogs'
+aiv_wl::oracle_base_home_dir: '/sysprogs/oracle'
+aiv_wl::middleware_home_dir: "/sysprogs/oracle/wls/%{hiera('aiv_wl::version')}0"
+aiv_wl::weblogic_home_dir: "%{hiera('aiv_wl::middleware_home_dir')}/wlserver"
+aiv_wl::wls_domains_dir: '/sysdata/oracle/wls/domains'
+aiv_wl::jdk_home_dir: '/sysprogs/oracle/java/current-jdk'
+aiv_wl::os_user: 'oracle'
+aiv_wl::os_group: 'oinstall'
+aiv_wl::download_dir: '/software'
+aiv_wl::puppet_download_mnt_point: '/software'
+aiv_wl::force: true
+aiv_wl::orainstpath_dir: "%{hiera('aiv_wl::ora_inventory_dir')}/oraInventory"
+
+# Web Logic Oracle Patch
+aiv_wl_patch::the_patch_id: '27338041'
+aiv_wl_patch::action: 'present'
+aiv_wl_patch::wl_version: '12213'
+aiv_wl_patch::oracle_product_home_dir: "/sysprogs/oracle/wls/%{hiera('aiv_wl_patch::wl_version')}0"
+aiv_wl_patch::jdk_home_dir: '/sysprogs/oracle/java/current-jdk'
+aiv_wl_patch::patch_id: "%{hiera('aiv_wl_patch::the_patch_id')}"
+aiv_wl_patch::patch_file: 'patch_wl'
+aiv_wl_patch::os_user: 'oracle'
+aiv_wl_patch::os_group: 'oinstall'
+aiv_wl_patch::download_dir: '/software'
+aiv_wl_patch::puppet_download_mnt_point: '/software'
+aiv_wl_patch::remote_file: false
+aiv_wl_patch::log_output: true
+aiv_wl_patch::ora_inventory_dir: '/sysprogs'
+aiv_wl_patch::orainstpath_dir: "%{hiera('aiv_wl_patch::ora_inventory_dir')}/oraInventory"
